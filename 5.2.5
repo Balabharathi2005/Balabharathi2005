@@ -1,0 +1,38 @@
+def find_repetitive_elements(arr):
+   
+    Args:
+        arr (list): The input array.
+
+    Returns:
+        None
+   
+    n = len(arr)
+    count = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] == arr[j]:
+                count += 1
+    
+    if count == 0:
+        print("Array elements are not repeated")
+    else:
+        print("The repetitive element(s): ", end="")
+        for i in range(n):
+            for j in range(i + 1, n):
+                if arr[i] == arr[j]:
+                    print(arr[j], end=" ")
+        print()
+
+def main():
+    
+    arr = []
+    n = int(input("Enter array size: "))
+    if n <= 0:
+        print("Invalid input")
+    else:
+        print(f"Enter {n} array elements: ", end="")
+        arr = [int(input()) for _ in range(n)]
+        find_repetitive_elements(arr)
+
+if __name__ == "__main__":
+    main()
