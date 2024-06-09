@@ -1,0 +1,27 @@
+def main():
+  """
+  This function takes an array of integers as input and prints the unique elements in the array.
+  """
+  n = int(input("Enter the array size : "))
+  if n == 0:
+    print("Invalid Input\n")
+    return
+
+  arr = []
+  print(f"Input {n} elements in an array : ", end="")
+  for i in range(n):
+    arr.append(int(input()))
+
+  print("The unique elements found in the array are : \n")
+  for i in range(n):
+    isunique = 1
+    for j in range(n):
+      if i != j and arr[i] == arr[j]:
+        isunique = 0
+        break
+    if isunique:
+      print(arr[i], end=" ")
+  print("\n")
+
+if __name__ == "__main__":
+  main()
