@@ -1,0 +1,19 @@
+
+def calculate_sum():
+    arr = []
+
+    n = int(input("Enter how many values you want to read: "))
+    
+    for i in range(n):
+        value = int(input(f"Enter the value of a[{i}]: "))
+        arr.append(value)
+    
+    
+    sum = 0
+    for element in arr:
+        sum += element
+    
+    
+    print(f"The sum of array elements = {sum}")
+
+calculate_sum()
